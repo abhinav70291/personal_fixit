@@ -5,9 +5,9 @@ import requests
 st.title('Welcome to Fixit Ai, your personal docbot!')
 
 # Define your endpoints
-PARSE_PDF_ENDPOINT = "http://localhost:8000/parse_pdf_create_vector_database"
-QUERY_ENDPOINT = "http://localhost:8000/query"
-DOCUMENT_LIST_ENDPOINT = "http://localhost:8000/document_list"
+PARSE_PDF_ENDPOINT = "https://personal-fixit.onrender.com//parse_pdf_create_vector_database"
+QUERY_ENDPOINT = "https://personal-fixit.onrender.com//query"
+DOCUMENT_LIST_ENDPOINT = "https://personal-fixit.onrender.com//document_list"
 
 # Fetch the list of documents
 try:
