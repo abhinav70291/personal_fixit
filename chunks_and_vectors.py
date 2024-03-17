@@ -1,4 +1,3 @@
-import httpx
 import os
 from pinecone import Pinecone
 from parse import parse_pdf
