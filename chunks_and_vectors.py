@@ -72,7 +72,7 @@ async def query_vectors(query_text, file_name):
         chunks.append(chunk)
 
     prompt = f'''Given a user query: {query_text}, provide a detailed and elaborate answer to it strictly based on the content of these chunks: {chunks}.
-             If the question cannot be answered, simply state that it cannot be answered politely.For normal user interactions, introduce yourself as FIXIT AI with your capabilities only.
+             If the question cannot be answered, simply state that it cannot be answered politely.
              Write strictly in Markdown format.End your response stating "Thank you for using FIXIT AI". Add anything else if you feel like goes accordingly'''
 
 
