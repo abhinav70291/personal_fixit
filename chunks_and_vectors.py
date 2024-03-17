@@ -10,10 +10,8 @@ load_dotenv()
 from document_list import upload_pdf_name
 from langchain.embeddings import HuggingFaceEmbeddings
 
-# Initialize device
 device="cpu"
 
-# Inititalize embedding_model
 embedding_model="sentence-transformers/all-MiniLM-L6-v2" 
 embedding = HuggingFaceEmbeddings(model_name=embedding_model, model_kwargs={'device':device})
 
@@ -56,7 +54,6 @@ async def text_to_vector(texts, file_name):
 
 async def query_vectors(query_text, file_name):
     print("starting query")
-    # Convert the query text to a vector
     query_vector = embedding.embed_query(query_text)
     print("query vectorized")
     print("file_name:",file_name)
@@ -90,7 +87,6 @@ async def query_vectors(query_text, file_name):
         max_tokens=1000,
         top_p=0.7,
         seed=12345,
-        # Set stream parameter to True
         )
 
     try:
